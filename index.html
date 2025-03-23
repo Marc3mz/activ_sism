@@ -6,12 +6,3 @@
 </body>
 </html>
 
-<script src="https://cdn.jsdelivr.net/pyodide/v0.24.0/full/pyodide.js"></script>
-<script>
-  async function runPython() {
-    let pyodide = await loadPyodide();
-    let result = pyodide.runPython("print('Actividad sismica')");
-    console.log(result);
-  }
-  runPython();
-</script>
