@@ -1,0 +1,10 @@
+runtime: python311  # Usa python310 o python311 (no python312)
+
+entrypoint: gunicorn -b :$PORT main:app  # Ajusta si tu app está en otro archivo
+
+handlers:
+  - url: /static
+    static_dir: static  # Sirve archivos estáticos desde la carpeta "static"
+
+  - url: /.*
+    script: auto  # Solo si estás en el entorno "Estándar" y sin usar `gunicorn`
