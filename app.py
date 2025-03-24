@@ -4,8 +4,8 @@ import joblib
 import os
 import pandas as pd
 from sklearn.neighbors import KernelDensity
-
-app = Flask(__name__)
+def crear_app():
+    app = Flask(__name__)
 
 # 📌 Cargar el modelo entrenado
 model_path = 'model/earthquake_model.joblib'
