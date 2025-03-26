@@ -5,6 +5,7 @@ import os
 import pandas as pd
 from sklearn.neighbors import KernelDensity
 
+
 app = Flask(__name__)
 
 # 📌 Cargar el modelo entrenado
@@ -98,3 +99,7 @@ def predict():
 # 📌 Ejecutar la aplicación
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+
+     
+
+      
