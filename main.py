@@ -18,7 +18,7 @@ url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.csv"
 # Descargar CSV solo si no existe
 if not os.path.exists("earthquakes.csv"):
     response = requests.get(url)
-    with open("earthquakes.csv", "wb") as file:
+    with open("/tmp/earthquakes.csv", "wb") as file:
         file.write(response.content)
 
 # Cargar datos
@@ -110,3 +110,5 @@ model_dir = 'model'
 os.makedirs(model_dir, exist_ok=True)
 joblib.dump(modelo, os.path.join(model_dir, 'earthquake_model.joblib'))
 print("Modelo guardado exitosamente en 'model/earthquake_model.joblib'.")
+   
+   
